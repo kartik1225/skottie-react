@@ -31,4 +31,4 @@ export default App
 
 ## License
 
-MIT © [lqbrqt](https://github.com/lqbrqt)
+BSD 3-Clause 
