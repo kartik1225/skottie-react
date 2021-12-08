@@ -18,8 +18,11 @@ export class SkottiePlayer extends React.Component<SRProps> {
   private animation: any
   private assetPath: string
 
-  constructor(props: any) {
+  constructor(props: SRProps) {
     super(props)
+
+    if (props.width) this.width = props.width
+    if (props.height) this.height = props.height
 
     this.loadKit = SkottieKitInit({
       locateFile: (file: string) => props.skottiePath + file
@@ -53,10 +56,10 @@ export class SkottiePlayer extends React.Component<SRProps> {
   private setContent(newContent: any): void {
     this.content = newContent
     if (this.content.w) {
-      this.width = this.content.w
+      if (!this.props.width) this.width = this.content.w
     }
     if (this.content.h) {
-      this.height = this.content.h
+      if (!this.props.height) this.height = this.content.h
     }
   }
 

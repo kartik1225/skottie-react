@@ -21,6 +21,8 @@ interface SRProps {
   animationData: LottieFile
   assetPath: string
   skottiePath: string
+  width?: number
+  height?: number
 }
 
 /**
