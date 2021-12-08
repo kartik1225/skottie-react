@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Skottie player for react",
   "author": "lqbrqt",
-  "license": "MIT",
+  "license": "BSD 3-Clause",
   "repository": "lqbrqt/skottie-react",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
