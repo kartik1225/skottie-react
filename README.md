@@ -12,17 +12,21 @@ npm install --save skottie-react
 
 ## Usage
 
+Place skottiekit.wasm file in your public directory
+
 ```tsx
-import React, { Component } from 'react'
+import React from 'react'
 
-import MyComponent from 'skottie-react'
+import { SkottiePlayer } from 'skottie-react'
 import 'skottie-react/dist/index.css'
+import data from './data.json';
 
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
+const App = () => {
+  return <SkottiePlayer animationData={data} assetPath={'http://localhost:3000/images'} />
 }
+
+export default App
+
 ```
 
 ## License
