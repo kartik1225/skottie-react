@@ -19,6 +19,8 @@ declare module '*.svg' {
 
 interface SRProps {
   animationData: LottieFile
+  assetPath: string
+  skottiePath: string
 }
 
 /**

@@ -1,11 +1,10 @@
 import React from 'react'
 
 const SkottieKitInit = require('skottiekit-wasm/bin/skottiekit.js')
-const loadKit = SkottieKitInit({
-  locateFile: (file: string) => '/' + file
-})
 
 export class SkottiePlayer extends React.Component<SRProps> {
+  private loadKit: any
+
   private content: LottieFile = {}
 
   public width = 0
@@ -21,6 +20,10 @@ export class SkottiePlayer extends React.Component<SRProps> {
 
   constructor(props: any) {
     super(props)
+
+    this.loadKit = SkottieKitInit({
+      locateFile: (file: string) => props.skottiePath + file
+    })
 
     this.assetPath = props.assetPath
 
@@ -59,7 +62,7 @@ export class SkottiePlayer extends React.Component<SRProps> {
 
   private updatePlayer(): void {
     if (this.shouldRenderAnimation()) {
-      loadKit.then((values: any) => {
+      this.loadKit.then((values: any) => {
         const SkottieKit = values
         if (this.animationUploaded && this.animation) {
           this.animation.delete()
