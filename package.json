@@ -1,6 +1,6 @@
 {
   "name": "skottie-react",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Skottie player for react",
   "author": "lqbrqt",
   "license": "BSD 3-Clause",
@@ -23,7 +23,6 @@
     "predeploy": "cd example && yarn install && yarn run build",
     "deploy": "gh-pages -d example/build",
     "postbuild": "cp ./node_modules/skottiekit-wasm/bin/skottiekit.wasm ./dist/skottiekit.wasm"
-
   },
   "peerDependencies": {
     "react": "^16.0.0"
