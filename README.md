@@ -22,7 +22,11 @@ import 'skottie-react/dist/index.css'
 import data from './data.json';
 
 const App = () => {
-  return <SkottiePlayer animationData={data} assetPath={'http://localhost:3000/images'} />
+  return <SkottiePlayer 
+          animationData={data} // Load animation from data.json
+          assetPath={'/images'} // Fetch assets (if extracted) from ${HOST_ADDR}/images
+          skottiePath='/' // Fetch skottiekit.wasm from ${HOST_ADDR}/skottiekit.wasm
+          height={800} width={800} /> 
 }
 
 export default App
